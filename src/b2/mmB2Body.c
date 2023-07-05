@@ -34,6 +34,7 @@ THE SOFTWARE.
 #include "mmB2World.h"
 
 #include <assert.h>
+#include <stddef.h>
 
 B2_API
 void

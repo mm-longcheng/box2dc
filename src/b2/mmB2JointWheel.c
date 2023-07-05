@@ -341,8 +341,8 @@ b2JointWheelInitVelocityConstraints(
     p->m_invIA = p->m_bodyA->m_invI;
     p->m_invIB = p->m_bodyB->m_invI;
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     b2Vec2Assign(cA, data->positions[p->m_indexA].c);
     aA = data->positions[p->m_indexA].a;
@@ -515,8 +515,8 @@ b2JointWheelSolveVelocityConstraints(
     float wB;
 
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     b2Vec2Assign(vA, data->velocities[p->m_indexA].v);
     wA = data->velocities[p->m_indexA].w;

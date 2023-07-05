@@ -33,6 +33,7 @@ THE SOFTWARE.
 #include "mmB2WorldCallbacks.h"
 
 #include <assert.h>
+#include <stddef.h>
 
 struct b2ContactFilter b2_defaultFilter = 
 {

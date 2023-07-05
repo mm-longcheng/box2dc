@@ -400,7 +400,7 @@ b2BodyGetInertia(
     const struct b2Body* p);
 
 /// Get the mass data of the body.
-/// @return a struct containing the mass, inertia and center of the body.
+/// @param data return a struct containing the mass, inertia and center of the body.
 B2_API
 void
 b2BodyGetMassData(
@@ -428,7 +428,7 @@ b2BodyResetMassData(
 
 /// Get the world coordinates of a point given the local coordinates.
 /// @param localPoint a point on the body measured relative the the body's origin.
-/// @return the same point expressed in world coordinates.
+/// @param worldPoint the same point expressed in world coordinates.
 B2_API
 void
 b2BodyGetWorldPoint(
@@ -438,7 +438,7 @@ b2BodyGetWorldPoint(
 
 /// Get the world coordinates of a vector given the local coordinates.
 /// @param localVector a vector fixed in the body.
-/// @return the same vector expressed in world coordinates.
+/// @param worldVector the same vector expressed in world coordinates.
 B2_API
 void
 b2BodyGetWorldVector(
@@ -448,7 +448,7 @@ b2BodyGetWorldVector(
 
 /// Gets a local point relative to the body's origin given a world point.
 /// @param worldPoint a point in world coordinates.
-/// @return the corresponding local point relative to the body's origin.
+/// @param localPoint the corresponding local point relative to the body's origin.
 B2_API
 void
 b2BodyGetLocalPoint(
@@ -458,7 +458,7 @@ b2BodyGetLocalPoint(
 
 /// Gets a local vector given a world vector.
 /// @param worldVector a vector in world coordinates.
-/// @return the corresponding local vector.
+/// @param localVector the corresponding local vector.
 B2_API
 void
 b2BodyGetLocalVector(
@@ -468,7 +468,7 @@ b2BodyGetLocalVector(
 
 /// Get the world linear velocity of a world point attached to this body.
 /// @param worldPoint a point in world coordinates.
-/// @return the world velocity of a point.
+/// @param linearVelocity the world velocity of a point.
 B2_API
 void
 b2BodyGetLinearVelocityFromWorldPoint(
@@ -478,7 +478,7 @@ b2BodyGetLinearVelocityFromWorldPoint(
 
 /// Get the world velocity of a local point.
 /// @param localPoint a point in local coordinates.
-/// @return the world velocity of a point.
+/// @param linearVelocity the world velocity of a point.
 B2_API
 void
 b2BodyGetLinearVelocityFromLocalPoint(

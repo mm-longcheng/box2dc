@@ -37,6 +37,7 @@ THE SOFTWARE.
 #include "mmB2Timer.h"
 
 #include <assert.h>
+#include <stddef.h>
 
 /*
 Position Correction Notes

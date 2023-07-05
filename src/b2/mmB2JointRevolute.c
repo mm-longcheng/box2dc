@@ -338,8 +338,8 @@ b2JointRevoluteInitVelocityConstraints(
     // K = [ mA+r1y^2*iA+mB+r2y^2*iB,  -r1y*iA*r1x-r2y*iB*r2x]
     //     [  -r1y*iA*r1x-r2y*iB*r2x, mA+r1x^2*iA+mB+r2x^2*iB]
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     p->m_K[0][0] = mA + mB + p->m_rA[1] * p->m_rA[1] * iA + p->m_rB[1] * p->m_rB[1] * iB;
     p->m_K[1][0] = -p->m_rA[1] * p->m_rA[0] * iA - p->m_rB[1] * p->m_rB[0] * iB;
@@ -427,8 +427,8 @@ b2JointRevoluteSolveVelocityConstraints(
     b2Vec2Assign(vB, data->velocities[p->m_indexB].v);
     wB = data->velocities[p->m_indexB].w;
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     fixedRotation = (iA + iB == 0.0f);
 
@@ -619,8 +619,8 @@ b2JointRevoluteSolvePositionConstraints(
         b2Vec2Sub(C, v, rA);
         positionError = b2Vec2Length(C);
 
-        mA = p->m_invMassA, mB = p->m_invMassB;
-        iA = p->m_invIA   , iB = p->m_invIB;
+        mA = p->m_invMassA; mB = p->m_invMassB;
+        iA = p->m_invIA   ; iB = p->m_invIB;
 
         K[0][0] = mA + mB + iA * rA[1] * rA[1] + iB * rB[1] * rB[1];
         K[0][1] = -iA * rA[0] * rA[1] - iB * rB[0] * rB[1];

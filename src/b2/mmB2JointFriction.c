@@ -272,8 +272,8 @@ b2JointFrictionInitVelocityConstraints(
     //     [  -r1y*iA*r1x-r2y*iB*r2x, mA+r1x^2*iA+mB+r2x^2*iB,           r1x*iA+r2x*iB]
     //     [          -r1y*iA-r2y*iB,           r1x*iA+r2x*iB,                   iA+iB]
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     K[0][0] = mA + mB + iA * p->m_rA[1] * p->m_rA[1] + iB * p->m_rB[1] * p->m_rB[1];
     K[0][1] = -iA * p->m_rA[0] * p->m_rA[1] - iB * p->m_rB[0] * p->m_rB[1];
@@ -342,8 +342,8 @@ b2JointFrictionSolveVelocityConstraints(
     b2Vec2Assign(vB, data->velocities[p->m_indexB].v);
     wB = data->velocities[p->m_indexB].w;
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     h = data->step.dt;
 

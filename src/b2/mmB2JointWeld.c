@@ -278,8 +278,8 @@ b2JointWeldInitVelocityConstraints(
     //     [  -r1y*iA*r1x-r2y*iB*r2x, mA+r1x^2*iA+mB+r2x^2*iB,           r1x*iA+r2x*iB]
     //     [          -r1y*iA-r2y*iB,           r1x*iA+r2x*iB,                   iA+iB]
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     K[0][0] = mA + mB + p->m_rA[1] * p->m_rA[1] * iA + p->m_rB[1] * p->m_rB[1] * iB;
     K[1][0] = -p->m_rA[1] * p->m_rA[0] * iA - p->m_rB[1] * p->m_rB[0] * iB;
@@ -384,8 +384,8 @@ b2JointWeldSolveVelocityConstraints(
     b2Vec2Assign(vB, data->velocities[p->m_indexB].v);
     wB = data->velocities[p->m_indexB].w;
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     if (p->m_stiffness > 0.0f)
     {
@@ -503,8 +503,8 @@ b2JointWeldSolvePositionConstraints(
     b2RotFromAngle(qA, aA);
     b2RotFromAngle(qB, aB);
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     b2Vec2Sub(v, p->m_localAnchorA, p->m_localCenterA);
     b2RotMulVec2(rA, qA, v);

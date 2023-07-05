@@ -391,8 +391,8 @@ b2JointPrismaticInitVelocityConstraints(
     b2Vec2Add(v, v, rB);
     b2Vec2Sub(d, v, rA);
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     // Compute motor Jacobian and effective mass.
     {
@@ -512,8 +512,8 @@ b2JointPrismaticSolveVelocityConstraints(
     b2Vec2Assign(vB, data->velocities[p->m_indexB].v);
     wB = data->velocities[p->m_indexB].w;
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     // Solve linear motor constraint
     if (p->m_enableMotor)
@@ -709,8 +709,8 @@ b2JointPrismaticSolvePositionConstraints(
     b2RotFromAngle(qA, aA);
     b2RotFromAngle(qB, aB);
 
-    mA = p->m_invMassA, mB = p->m_invMassB;
-    iA = p->m_invIA   , iB = p->m_invIB;
+    mA = p->m_invMassA; mB = p->m_invMassB;
+    iA = p->m_invIA   ; iB = p->m_invIB;
 
     // Compute fresh Jacobians
     b2Vec2Sub(v, p->m_localAnchorA, p->m_localCenterA);
