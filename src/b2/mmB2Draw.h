@@ -135,6 +135,11 @@ struct b2Draw
     const struct b2DrawMeta* Meta;
 };
 
+/// draw super member.
+#define b2DrawSuper             \
+uint32 m_drawFlags;             \
+const struct b2DrawMeta* Meta
+
 /// Reset the drawing flags.
 B2_API
 void
