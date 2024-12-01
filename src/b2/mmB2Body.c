@@ -36,6 +36,10 @@ THE SOFTWARE.
 #include <assert.h>
 #include <stddef.h>
 
+#if defined(__GNUC__) && !defined(__clang__)
+#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+#endif
+
 B2_API
 void
 b2BodyDefReset(

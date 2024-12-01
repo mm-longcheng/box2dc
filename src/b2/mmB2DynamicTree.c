@@ -33,6 +33,10 @@ THE SOFTWARE.
 #include <string.h>
 #include <stdlib.h>
 
+#if defined(__GNUC__) && !defined(__clang__)
+#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+#endif
+
 // Allocate a node from the pool. Grow the pool if necessary.
 static
 int32 

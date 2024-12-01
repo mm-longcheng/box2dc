@@ -254,6 +254,12 @@ b2Vec2Normalize(
         r[0] = 0.0f;
         r[1] = 0.0f;
     }
+    else if (1.0f == d)
+    {
+        l = 1.0f;
+        r[0] = x;
+        r[1] = y;
+    }
     else
     {
         float k;
